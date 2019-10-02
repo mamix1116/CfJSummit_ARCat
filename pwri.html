@@ -16,7 +16,7 @@
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
       <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
       <a-assets>
-          <video type="video/mp4" id="mimmr" autoplay="true" loop="true" src="./resources/mimm-r_run.mp4" playsinline webkit-playsinline muted></video>
+          <video type="video/mp4" id="mimmr" autoplay="true" loop="true" src="./resources/EdenBeach.mp4" playsinline webkit-playsinline muted></video>
       </a-assets>
       <!-- a-markerのtypeにpatternを設定, 作ったpattファイルをurlにを指定 -->
       <a-marker preset="custom" type="pattern" url="./marker/pattern-marker.patt">
@@ -29,15 +29,4 @@
     </a-scene>
 
   </body>
-  <script>
-    function playVideo () {
-      var els = document.querySelectorAll('.video')
-      Array.prototype.slice.call(els).forEach(function(el) {
-        el.components.material.material.map.image.play()
-      })
-    }
-    document.querySelector('.a-enter-vr-button').addEventListener('click', playVideo)
-
-
-  </script>
 </html>
